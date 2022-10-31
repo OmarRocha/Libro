@@ -1,0 +1,266 @@
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas
+$ git init
+Initialized empty Git repository in C:/Users/NETZA/Desktop/Cursos/Practicas/.git/
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas (master)
+$ LS
+indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas (master)
+$ git clone git@github.com:OmarRocha/Libro.git
+Cloning into 'Libro'...
+Enter passphrase for key '/c/Users/NETZA/.ssh/id_rsa':
+Enter passphrase for key '/c/Users/NETZA/.ssh/id_rsa':
+warning: You appear to have cloned an empty repository.
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas (master)
+$ ls
+Libro/  indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas (master)
+$ cd Libro/
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ ls
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ touch indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ code indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        indice.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git add indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   indice.txt
+
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git commit -m "Añadido índice del libro."
+[main (root-commit) 711c417] Añadido índice del libro.
+ 1 file changed, 3 insertions(+)
+ create mode 100644 indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ code indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   indice.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git diff indice.txt
+diff --git a/indice.txt b/indice.txt
+index 8142b7e..3c4c2a7 100644
+--- a/indice.txt
++++ b/indice.txt
+@@ -1,3 +1,4 @@
+ Capítulo 1: Introducción a Git
+ Capítulo 2: Flujo de trabajo básico
+-Capítulo 3: Repositorios remotos
+\ No newline at end of file
++Capítulo 3: Gestión de ramas
++Capítulo 4: Repositorios remotos
+\ No newline at end of file
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git log
+commit 711c417db8cd2c64855a5ef343758744e2d55f80 (HEAD -> main)
+Author: Netza_Rocha <sr.netza@gmail.com>
+Date:   Mon Oct 31 00:43:57 2022 -0600
+
+    Añadido índice del libro.
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   indice.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git add indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git commit -m "Añadido capítulo 3 sobre gestión de ramas"
+[main 6f26e9a] Añadido capítulo 3 sobre gestión de ramas
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ ls
+indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ mkdirt capitulos
+bash: mkdirt: command not found
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ ls
+indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ mkdir capitulos
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ ls
+capitulos/  indice.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ cd capitulos/
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro/capitulos (main)
+$ touch capitulo1.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro/capitulos (main)
+$ code capitulo1.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro/capitulos (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro/capitulos (main)
+$ cd ..
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        capitulos/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git add .
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git commit -m "Añadido capítulo 1."
+[main 3045592] Añadido capítulo 1.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo1.txt
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git log
+commit 3045592ba14cc831d7c4d10cc78d4bd25d7860af (HEAD -> main)
+Author: Netza_Rocha <sr.netza@gmail.com>
+Date:   Mon Oct 31 01:24:25 2022 -0600
+
+    Añadido capítulo 1.
+
+commit 6f26e9a04df22abca379e0b6c3f9dcf29023246b
+Author: Netza_Rocha <sr.netza@gmail.com>
+Date:   Mon Oct 31 01:18:23 2022 -0600
+
+    Añadido capítulo 3 sobre gestión de ramas
+
+commit 711c417db8cd2c64855a5ef343758744e2d55f80
+Author: Netza_Rocha <sr.netza@gmail.com>
+Date:   Mon Oct 31 00:43:57 2022 -0600
+
+    Añadido índice del libro.
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git commit -m "File commandos agregados."
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git remote add main git@github.com:OmarRocha/Libro.git
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ git push -u origin main
+Enter passphrase for key '/c/Users/NETZA/.ssh/id_rsa':
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 970 bytes | 80.00 KiB/s, done.
+Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:OmarRocha/Libro.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+NETZA@DESKTOP-J3GE10B MINGW64 ~/Desktop/Cursos/Practicas/Libro (main)
+$ ls
+capitulos/  indice.txt
